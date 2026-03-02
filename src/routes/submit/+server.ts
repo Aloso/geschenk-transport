@@ -29,11 +29,12 @@ export async function POST({ request, platform, getClientAddress }): Promise<Res
 	if (!/^(00\d{1,2}|\+\d{1,2}|0)[\d]{7,16}$/.test(phone.replaceAll(/[ .\-()/\\]/g, '').trim()))
 		error(400, 'Invalid phone number')
 
+	const id = v4()
 	await platform.env.DB.prepare(
 		`INSERT INTO secret_santa (id, created, name, phone, address, age, moreInfo, verified)
 		VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)`,
 	)
-		.bind(v4(), Date.now(), name, phone, address, age, moreInfo ?? null, 0)
+		.bind(id, Date.now(), name, phone, address, age, moreInfo ?? null, 0)
 		.run()
 
 	const { WorkerMailer } = await import('worker-mailer')
@@ -69,7 +70,13 @@ export async function POST({ request, platform, getClientAddress }): Promise<Res
 
 	const url = new URL('/angemeldet', request.url)
 	url.searchParams.set('id', v4())
-	return Response.redirect(url, 303)
+	return new Response('Sie werden weitergeleitet...', {
+		status: 303,
+		headers: {
+			Location: url.toString(),
+			'Set-Cookie': `registration-id=${id}; Max-Age=${365 * 24 * 60 * 60}; Path=/; SameSite=Strict`,
+		},
+	})
 }
 
 async function verifyCaptcha(token: string, ip: string, platform: App.Platform) {

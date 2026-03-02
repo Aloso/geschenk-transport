@@ -21,12 +21,12 @@ export async function PATCH({ request, platform }): Promise<Response> {
 		return Response.redirect(new URL('/admin/loginForm?m=loggedOut', request.url), 303)
 	}
 
-	const { id, verified, notes } = await request.json()
+	const { id, status, notes } = await request.json()
 	if (!id) error(400, 'Missing id')
 
-	if (verified != null) {
-		await platform.env.DB.prepare('UPDATE secret_santa SET verified = ?1 WHERE id = ?2')
-			.bind(verified ? 1 : 0, id)
+	if (status != null) {
+		await platform.env.DB.prepare('UPDATE secret_santa SET `status` = ?1 WHERE id = ?2')
+			.bind(status, id)
 			.run()
 	} else if (notes != null) {
 		await platform.env.DB.prepare('UPDATE secret_santa SET notes = ?1 WHERE id = ?2')

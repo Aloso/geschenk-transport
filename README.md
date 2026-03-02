@@ -1,4 +1,4 @@
-# Trans* Santa Kassel
+# Trans\* Santa Kassel
 
 ## Developing
 
@@ -17,3 +17,11 @@ pnpm run build
 ```
 
 You can preview the production build with `pnpm run preview`.
+
+## TODO
+
+- E-Mail
+- Design
+- Logo
+- FAQ- und Impressums-Seite
+- Schriftgrößen für verschiedene Displaygrößen anpassen

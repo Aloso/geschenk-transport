@@ -1,5 +1,9 @@
 <script lang="ts">
+	import PresentBox from '$lib/components/PresentBox.svelte'
 	import SecretSantaForm from '$lib/components/SecretSantaForm.svelte'
+	import type { PageData } from './+page.server'
+
+	let { data }: { data: PageData } = $props()
 </script>
 
 <h1 style="line-height: 100%;">
@@ -42,7 +46,50 @@
 	dich von uns beschenken!
 </p>
 
-<SecretSantaForm />
+<PresentBox>
+	{#if data.registration}
+		<h2>Hallo, {data.registration.name}!</h2>
+		<p>Du wurdest für den Geschenk-Trans*port angemeldet.</p>
+		<p>Folgende Daten wurden gespeichert:</p>
+		<ul>
+			<li>
+				<strong>Telefonnummer:</strong>
+				{data.registration.phone}
+			</li>
+			<li style="white-space: pre-wrap;">
+				<strong>Liefer-Adresse:</strong>{'\n'}{data.registration.address}
+			</li>
+			<li style="white-space: pre-wrap;">
+				<strong>Weitere Informationen:</strong>{'\n'}{data.registration.moreInfo ??
+					'Keine angegeben'}
+			</li>
+		</ul>
+		{#if data.registration.status === 'verified'}
+			<p>
+				Deine Angaben wurden von uns geprüft. Du kannst dich jetzt zurücklehnen und auf dein
+				Geschenk warten 🎉
+			</p>
+		{/if}
+		<p>Stimmt etwas nicht? Dann nimm bitte mit uns Kontakt auf:</p>
+	{:else if data.error}
+		{#if data.error === 'not-found'}
+			<h2>Deine Registrierung wurde gelöscht.</h2>
+			<p>
+				Deine Anmeldung konnte nicht gefunden werden. Das heißt wahrscheinlich, dass sie nach einer
+				Prüfung deiner Angaben entfernt wurde.
+			</p>
+			<p>Wenn du glaubst, dass das ein Fehler ist, nimm bitte mit uns Kontakt auf:</p>
+		{:else}
+			<h2>Fehler</h2>
+			<p>Beim Abrufen deiner Anmeldung ist ein Fehler aufgetreten.</p>
+			<p>Wenn du glaubst, dass das ein Fehler ist, nimm bitte mit uns Kontakt auf:</p>
+		{/if}
+	{:else}
+		<SecretSantaForm />
+	{/if}
+
+	<a class="formi button primary" href="/kontakt">Kontaktformular</a>
+</PresentBox>
 
 <svelte:head>
 	<title>Trans Santa Kassel</title>

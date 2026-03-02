@@ -104,12 +104,16 @@ a {
 	}
 }
 
-button.formi {
-	background-color: #eee;
-	border: 1px solid #ddd;
+button.formi,
+.button.formi {
+	cursor: default;
+	text-decoration: none;
+	background-color: #0001;
+	border: 1px solid #0002;
 	transition:
 		border-color 0.2s,
 		background-color 0.2s;
+	width: auto;
 
 	&:hover,
 	&:focus {
@@ -141,6 +145,17 @@ button.formi {
 
 		&.disabled {
 			background-color: #000a;
+		}
+	}
+
+	&.red {
+		border-color: #fb9090;
+		background-color: #fbc9c9;
+
+		&:hover,
+		&:focus {
+			border-color: #f46262;
+			background-color: #fab0b0;
 		}
 	}
 }

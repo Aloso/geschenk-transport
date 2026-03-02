@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/state'
+
 	// import favicon from '$lib/assets/favicon.svg';
 	import './global.scss'
 
@@ -9,7 +11,7 @@
 	<!-- <link rel="icon" href={favicon} /> -->
 </svelte:head>
 
-<main>
+<main class:admin={page.url.pathname.startsWith('/admin')}>
 	{@render children()}
 </main>
 
@@ -26,6 +28,10 @@
 		max-width: 900px;
 		margin: 0 auto;
 		padding: 2rem;
+
+		&.admin {
+			max-width: 1400px;
+		}
 	}
 
 	footer {

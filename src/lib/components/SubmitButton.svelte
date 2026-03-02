@@ -17,5 +17,6 @@
 	button {
 		padding: 12px 20px;
 		margin: 1.5rem 0 0 0;
+		width: 100%;
 	}
 </style>

@@ -6,7 +6,7 @@ export interface Registration {
 	address: string
 	age: number
 	moreInfo?: string
-	verified: boolean
+	status: 'pending' | 'verified' | 'deleted'
 	notes?: string
 }
 
@@ -18,7 +18,7 @@ export interface DbRegistration {
 	address: string
 	age: number
 	moreInfo: string | null
-	verified: number
+	status: 'pending' | 'verified' | 'deleted'
 	notes: string | null
 }
 
@@ -31,7 +31,7 @@ export function registrationFromDb(r: DbRegistration): Registration {
 		address: r.address,
 		age: r.age,
 		moreInfo: r.moreInfo ?? undefined,
-		verified: r.verified === 1,
+		status: r.status,
 		notes: r.notes ?? undefined,
 	}
 }

@@ -3,7 +3,8 @@ import { tryAuthentication } from '../../backend/auth'
 import { registrationFromDb, type DbRegistration, type Registration } from '$lib/data.js'
 
 export interface AdminSantaData {
-	registrations: Registration[]
+	activeRegistrations: Registration[]
+	deletedRegistrations: Registration[]
 }
 
 export async function load({ platform, request }): Promise<AdminSantaData> {
@@ -17,7 +18,10 @@ export async function load({ platform, request }): Promise<AdminSantaData> {
 		'SELECT * FROM secret_santa ORDER BY created DESC',
 	).all<DbRegistration>()
 
+	const mapped = registrations.results.map(registrationFromDb)
+
 	return {
-		registrations: registrations.results.map(registrationFromDb),
+		activeRegistrations: mapped.filter(r => r.status !== 'deleted'),
+		deletedRegistrations: mapped.filter(r => r.status === 'deleted'),
 	}
 }
