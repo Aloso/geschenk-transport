@@ -71,6 +71,8 @@
 			</p>
 		{/if}
 		<p>Stimmt etwas nicht? Dann nimm bitte mit uns Kontakt auf:</p>
+
+		<p><a class="formi button primary" href="/kontakt">Kontaktformular</a></p>
 	{:else if data.error}
 		{#if data.error === 'not-found'}
 			<h2>Deine Registrierung wurde gelöscht.</h2>
@@ -84,11 +86,11 @@
 			<p>Beim Abrufen deiner Anmeldung ist ein Fehler aufgetreten.</p>
 			<p>Wenn du glaubst, dass das ein Fehler ist, nimm bitte mit uns Kontakt auf:</p>
 		{/if}
+
+		<p><a class="formi button primary" href="/kontakt">Kontaktformular</a></p>
 	{:else}
 		<SecretSantaForm />
 	{/if}
-
-	<a class="formi button primary" href="/kontakt">Kontaktformular</a>
 </PresentBox>
 
 <svelte:head>

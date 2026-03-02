@@ -1,7 +1,6 @@
 import { error } from '@sveltejs/kit'
 import { formDataText } from '../../../backend/helper'
 import { escapeHtml } from '../../../backend/sanitize'
-import { v4 } from 'uuid'
 import { getCookies } from '$lib/cookie'
 import { getRegistration } from '../../../backend/registration'
 import type { Registration } from '$lib/data'
