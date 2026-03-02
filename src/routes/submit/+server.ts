@@ -31,10 +31,10 @@ export async function POST({ request, platform, getClientAddress }): Promise<Res
 
 	const id = v4()
 	await platform.env.DB.prepare(
-		`INSERT INTO secret_santa (id, created, name, phone, address, age, moreInfo, verified)
-		VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)`,
+		`INSERT INTO secret_santa (id, created, name, phone, address, age, moreInfo)
+		VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)`,
 	)
-		.bind(id, Date.now(), name, phone, address, age, moreInfo ?? null, 0)
+		.bind(id, Date.now(), name, phone, address, age, moreInfo ?? null)
 		.run()
 
 	const { WorkerMailer } = await import('worker-mailer')
