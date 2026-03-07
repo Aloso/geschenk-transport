@@ -174,6 +174,8 @@
 		height: 100%;
 		min-height: 36px;
 		border: none;
+		background-color: transparent;
+		color: inherit;
 		margin: -5px;
 		padding: 5px;
 		font: inherit;

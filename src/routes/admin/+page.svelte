@@ -20,24 +20,9 @@
 <RegistrationList registrations={data.activeRegistrations} />
 
 <details>
-	<summary>
+	<summary class="h2">
 		<h2>Gelöschte Registrierungen</h2>
 	</summary>
 
 	<RegistrationList registrations={data.deletedRegistrations} deleted />
 </details>
-
-<style lang="scss">
-	summary {
-		cursor: pointer;
-
-		&:hover,
-		&:focus {
-			color: #0a4caf;
-		}
-	}
-
-	summary h2 {
-		display: inline;
-	}
-</style>
