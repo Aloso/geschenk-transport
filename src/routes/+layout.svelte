@@ -20,7 +20,8 @@
 	<a href="/">Startseite</a>
 	<a href="/datenschutz">Datenschutz</a>
 	<span>Impressum</span>
-	<span>Kontakt</span>
+	<a href="/kontakt">Kontakt</a>
+	<a href="/faq">FAQ</a>
 </footer>
 
 <style lang="scss">
@@ -38,7 +39,7 @@
 		max-width: 900px;
 		margin: 2rem auto;
 		padding: 0 2rem;
-		color: #000a;
+		color: #fffc;
 		font-size: 0.9rem;
 		display: flex;
 		flex-wrap: wrap;

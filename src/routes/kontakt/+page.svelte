@@ -46,3 +46,8 @@
 		<SubmitButton>Abschicken</SubmitButton>
 	</form>
 </PresentBox>
+
+<p>
+	Du erreichst uns auch <strong>per E-Mail</strong> an
+	<a href="mailto:queer_referat@asta.uni-kassel.de">queer_referat@asta.uni-kassel.de</a>
+</p>

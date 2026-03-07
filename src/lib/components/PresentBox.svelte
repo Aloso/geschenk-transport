@@ -39,6 +39,7 @@
 		margin-top: 1rem;
 		background-color: #ffeaff;
 		border: 2px solid #ffceff;
+		color: black;
 		border-radius: 15px;
 		padding: 1.5rem;
 		box-sizing: border-box;
