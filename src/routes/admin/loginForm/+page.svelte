@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths'
 	import { onMount } from 'svelte'
 
 	let username = $state('')
@@ -28,42 +29,44 @@
 	<title>Admin Login | Geschenk Trans*port</title>
 </svelte:head>
 
-<form onsubmit={submit} method="POST" action="/admin/login">
-	<h1>Admin-Login</h1>
-	<label>
-		Name:
-		<input
-			name="user"
-			type="text"
-			bind:value={username}
-			class="formi"
-			class:invalid={submitted && username === ''}
-		/>
-	</label>
-	<label>
-		Passwort:
-		<input
-			name="password"
-			type="password"
-			bind:value={password}
-			class="formi"
-			class:invalid={submitted && password === ''}
-		/>
-	</label>
-	<button
-		type="submit"
-		class="formi primary"
-		disabled={submitted && (username === '' || password === '')}
-	>
-		Anmelden
-	</button>
+<div class="box">
+	<form onsubmit={submit} method="POST" action={resolve('/admin/login')}>
+		<h1>Admin-Login</h1>
+		<label>
+			Name:
+			<input
+				name="user"
+				type="text"
+				bind:value={username}
+				class="formi"
+				class:invalid={submitted && username === ''}
+			/>
+		</label>
+		<label>
+			Passwort:
+			<input
+				name="password"
+				type="password"
+				bind:value={password}
+				class="formi"
+				class:invalid={submitted && password === ''}
+			/>
+		</label>
+		<button
+			type="submit"
+			class="formi primary"
+			disabled={submitted && (username === '' || password === '')}
+		>
+			Anmelden
+		</button>
 
-	{#if status === 'loginFailed'}
-		<p class="error">Login fehlgeschlagen</p>
-	{:else if status === 'loggedOut'}
-		<p class="info">Du wurdest abgemeldet</p>
-	{/if}
-</form>
+		{#if status === 'loginFailed'}
+			<p class="error">Login fehlgeschlagen</p>
+		{:else if status === 'loggedOut'}
+			<p class="info">Du wurdest abgemeldet</p>
+		{/if}
+	</form>
+</div>
 
 <style lang="scss">
 	:global(main) {

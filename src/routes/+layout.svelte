@@ -21,6 +21,17 @@
 	class:admin={page.url.pathname.startsWith('/admin')}
 	class:small={page.url.pathname === '/' || page.url.pathname === '/kontakt'}
 >
+	<nav>
+		<a class:active={page.url.pathname === '/'} href={resolve('/')}>Mitmachen</a>
+		<a
+			class:active={page.url.pathname.startsWith('/unterstuetzen')}
+			href={resolve('/unterstuetzen')}>Unterstützen</a
+		>
+		<a class:active={page.url.pathname.startsWith('/kontakt')} href={resolve('/kontakt')}>Kontakt</a
+		>
+		<a class:active={page.url.pathname.startsWith('/faq')} href={resolve('/faq')}>Hilfe</a>
+	</nav>
+
 	{@render children()}
 </main>
 
@@ -64,6 +75,39 @@
 
 		&.small {
 			max-width: 35rem;
+		}
+	}
+
+	nav {
+		margin: -1rem 0 1rem 0;
+		overflow-x: auto;
+		white-space: nowrap;
+		text-align: center;
+		scrollbar-width: thin;
+
+		@media (max-width: 38rem) {
+			margin-left: -2rem;
+			margin-right: -2rem;
+			padding: 0 1rem;
+		}
+
+		a {
+			display: inline-block;
+			background-color: #fffffff2;
+			padding: 0.2rem 0.6rem;
+			border-radius: 2rem;
+			color: #002b89;
+			text-decoration: none;
+			font-weight: 600;
+
+			&:not(:last-child) {
+				margin-right: 0.3rem;
+			}
+
+			&.active {
+				background-color: #eea8f7;
+				color: black;
+			}
 		}
 	}
 

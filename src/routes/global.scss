@@ -5,14 +5,14 @@
 		sans-serif;
 	font-size: calc(1.2em + 0.2vw);
 	font-weight: 520;
+	background: linear-gradient(#00279c, #1370d4);
+	background-attachment: fixed;
+	color: white;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(#00279c, #1370d4);
-	background-attachment: fixed;
-	color: white;
 }
 
 .box {
@@ -157,6 +157,7 @@ a {
 button.formi,
 .button.formi {
 	cursor: default;
+	text-align: center;
 	text-decoration: none;
 	background-color: #0001;
 	border: 1px solid #0002;
