@@ -8,4 +8,6 @@
 	<title>Häufige Fragen | Geschenk-Trans*port</title>
 </svelte:head>
 
-{@html new Marked(faqExtension({ level: 2 })).parse(faq)}
+<div class="box">
+	{@html new Marked(faqExtension({ level: 2 })).parse(faq)}
+</div>

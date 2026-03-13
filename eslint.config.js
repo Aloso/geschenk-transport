@@ -27,6 +27,8 @@ export default defineConfig(
 				'warn',
 				{ varsIgnorePattern: '^_', argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
 			],
+			'svelte/no-at-html-tags': 'off',
+			'svelte/no-useless-mustaches': 'off',
 		},
 	},
 	{

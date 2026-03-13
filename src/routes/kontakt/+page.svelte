@@ -14,9 +14,16 @@
 	<title>Kontakt | Geschenk Trans*port</title>
 </svelte:head>
 
-<h1>Kontakt</h1>
+<div class="box">
+	<h1>Kontakt</h1>
 
-<p>Hast du ein Anliegen? Dann schreib uns eine Nachricht.</p>
+	<p>Hast du ein Anliegen? Dann schreib uns eine Nachricht im folgenden Formular.</p>
+
+	<p>
+		Du erreichst uns auch <strong>per E-Mail</strong> an
+		<a href="mailto:kontakt@geschenk-transport.de">kontakt@geschenk-transport.de</a>
+	</p>
+</div>
 
 <PresentBox withRibbon={false}>
 	<form method="post" action="/kontakt/submit">
@@ -50,8 +57,3 @@
 		<SubmitButton>Abschicken</SubmitButton>
 	</form>
 </PresentBox>
-
-<p>
-	Du erreichst uns auch <strong>per E-Mail</strong> an
-	<a href="mailto:queer_referat@asta.uni-kassel.de">queer_referat@asta.uni-kassel.de</a>
-</p>

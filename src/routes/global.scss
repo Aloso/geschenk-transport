@@ -15,6 +15,39 @@ body {
 	color: white;
 }
 
+.box {
+	margin-bottom: 2rem;
+	background-color: #fffffff2;
+	border-radius: 0.75rem;
+	padding: 2rem;
+	color: black;
+	overflow-x: auto;
+
+	> :first-child {
+		margin-top: 0;
+	}
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 38rem) {
+		margin: 0 -2rem;
+	}
+
+	a {
+		color: #0067c1;
+		font-weight: 550;
+		text-underline-offset: 4px;
+		text-decoration-thickness: 1.6px;
+
+		&:hover,
+		&:focus {
+			color: #004daa;
+			text-decoration-color: magenta;
+		}
+	}
+}
+
 p,
 ul,
 ol,
@@ -45,30 +78,30 @@ h1,
 .h1 {
 	font-weight: 800;
 	text-align: center;
-	font-size: calc(1.8rem + 0.7vw);
+	font-size: 1.9rem;
 	margin: 0 0 2rem 0;
 	line-height: 150%;
 }
 h2,
 .h2 {
 	font-weight: 750;
-	font-size: 1.66rem;
+	font-size: 1.5rem;
 }
 h3,
 .h3 {
-	font-size: 1.45rem;
+	font-size: 1.35rem;
 }
 h4,
 .h4 {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 }
 h5,
 .h5 {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 h6,
 .h6 {
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 .subtitle {
@@ -78,14 +111,11 @@ h6,
 }
 
 a {
-	color: #9de0ff;
-	font-weight: 550;
-	text-underline-offset: 4px;
-	text-decoration-thickness: 1.4px;
+	color: #b4efff;
 
 	&:hover,
 	&:focus {
-		color: #9de0ff;
+		color: #71d9ff;
 		text-decoration-color: magenta;
 	}
 }
@@ -194,7 +224,7 @@ details summary {
 
 	&:hover,
 	&:focus {
-		color: #9de0ff;
+		color: #004bb5;
 	}
 }
 

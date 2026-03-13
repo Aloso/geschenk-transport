@@ -13,16 +13,18 @@
 	<title>Admin | Geschenk Trans*port</title>
 </svelte:head>
 
-<h1>Administration</h1>
+<div class="box">
+	<h1>Administration</h1>
 
-<h2>Registrierungen</h2>
+	<h2>Registrierungen</h2>
 
-<RegistrationList registrations={data.activeRegistrations} />
+	<RegistrationList registrations={data.activeRegistrations} />
 
-<details>
-	<summary class="h2">
-		<h2>Gelöschte Registrierungen</h2>
-	</summary>
+	<details>
+		<summary class="h2">
+			<h2>Gelöschte Registrierungen</h2>
+		</summary>
 
-	<RegistrationList registrations={data.deletedRegistrations} deleted />
-</details>
+		<RegistrationList registrations={data.deletedRegistrations} deleted />
+	</details>
+</div>

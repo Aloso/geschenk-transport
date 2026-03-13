@@ -7,4 +7,6 @@
 	<title>Datenschutz | Geschenk Trans*port</title>
 </svelte:head>
 
-{@html marked(datenschutz)}
+<div class="box">
+	{@html marked(datenschutz)}
+</div>

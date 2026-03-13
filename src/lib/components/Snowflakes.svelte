@@ -38,6 +38,11 @@
 </div>
 
 <style lang="scss">
+	.snowflakes {
+		z-index: -1;
+		position: relative;
+	}
+
 	/* customizable snowflake styling */
 	.snowflake {
 		color: #fff;
@@ -70,7 +75,6 @@
 	.snowflake {
 		position: fixed;
 		top: -10%;
-		z-index: 9999;
 		-webkit-user-select: none;
 		user-select: none;
 		cursor: default;
