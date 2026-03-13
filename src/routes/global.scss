@@ -23,6 +23,10 @@ body {
 	color: black;
 	overflow-x: auto;
 
+	&.pink {
+		background-color: #ffeaff;
+	}
+
 	> :first-child {
 		margin-top: 0;
 	}
@@ -31,7 +35,8 @@ body {
 	}
 
 	@media (max-width: 38rem) {
-		margin: 0 -2rem;
+		margin-left: -2rem;
+		margin-right: -2rem;
 	}
 
 	a {

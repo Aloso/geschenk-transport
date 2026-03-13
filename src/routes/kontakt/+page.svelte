@@ -1,5 +1,4 @@
 <script lang="ts">
-	import PresentBox from '$lib/components/PresentBox.svelte'
 	import SubmitButton from '$lib/components/SubmitButton.svelte'
 	import ValidatedInput from '$lib/components/ValidatedInput.svelte'
 	import type { PageData } from './+page.server'
@@ -25,7 +24,7 @@
 	</p>
 </div>
 
-<PresentBox withRibbon={false}>
+<div class="box pink">
 	<form method="post" action="/kontakt/submit">
 		<ValidatedInput
 			type="textarea"
@@ -56,4 +55,4 @@
 
 		<SubmitButton>Abschicken</SubmitButton>
 	</form>
-</PresentBox>
+</div>

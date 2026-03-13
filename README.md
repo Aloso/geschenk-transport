@@ -20,8 +20,7 @@ You can preview the production build with `pnpm run preview`.
 
 ## TODO
 
+- Limit an Anmeldungen
 - E-Mail
 - Design
-- Logo
-- FAQ- und Impressums-Seite
-- Schriftgrößen für verschiedene Displaygrößen anpassen
+- Impressums-Seite
