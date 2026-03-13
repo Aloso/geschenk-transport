@@ -3,4 +3,8 @@
 	import datenschutz from './datenschutz.md?raw'
 </script>
 
+<svelte:head>
+	<title>Datenschutz | Geschenk Trans*port</title>
+</svelte:head>
+
 {@html marked(datenschutz)}

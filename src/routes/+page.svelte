@@ -6,6 +6,10 @@
 	let { data }: { data: PageData } = $props()
 </script>
 
+<svelte:head>
+	<title>Geschenk Trans*port</title>
+</svelte:head>
+
 <h1 style="line-height: 100%;">
 	Geschenk<br />Trans<span style="color:#d2b;margin:0 -0.05em">*</span>port
 </h1>
@@ -92,7 +96,3 @@
 		<SecretSantaForm />
 	{/if}
 </PresentBox>
-
-<svelte:head>
-	<title>Trans Santa Kassel</title>
-</svelte:head>

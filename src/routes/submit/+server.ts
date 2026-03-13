@@ -53,7 +53,7 @@ export async function POST({ request, platform, getClientAddress }): Promise<Res
 
 	// Send email
 	await mailer.send({
-		from: { name: 'Trans* Santa', email: 'contact@queereszentrumkassel.de' },
+		from: { name: 'Geschenk Trans*port', email: 'kontakt@geschenk-transport.de' },
 		to: platform.env.ADMIN_RECIPIENTS.split(','),
 		subject: `Anmeldung: ${name}`,
 		html: `<!DOCTYPE html>

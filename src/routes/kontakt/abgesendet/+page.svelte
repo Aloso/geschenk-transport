@@ -1,8 +1,12 @@
-<h1>Trans* Santa Kassel</h1>
+<script lang="ts">
+	import { resolve } from '$app/paths'
+</script>
+
+<h1>Geschenk Trans*port</h1>
 
 <p>Wir haben deine Nachricht enthalten.</p>
-<p><a href="/">Zur Startseite</a></p>
+<p><a href={resolve('/')}>Zur Startseite</a></p>
 
 <svelte:head>
-	<title>Nachricht übermittelt | Trans Santa Kassel</title>
+	<title>Nachricht übermittelt | Geschenk Trans*port</title>
 </svelte:head>

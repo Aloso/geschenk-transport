@@ -25,7 +25,7 @@
 </script>
 
 <svelte:head>
-	<title>Admin Login | Trans* Santa Kassel</title>
+	<title>Admin Login | Geschenk Trans*port</title>
 </svelte:head>
 
 <form onsubmit={submit} method="POST" action="/admin/login">

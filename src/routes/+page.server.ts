@@ -5,10 +5,10 @@ import { getRegistration } from '../backend/registration'
 
 export interface PageData {
 	registration?: Registration
-	error?: 'not-found' | 'other'
+		error?: 'not-found' | 'other'
 }
-
-export async function load({ platform, request }): Promise<PageData> {
+ 
+	export async function load({ platform, request }): Promise<PageData> {
 	if (!platform) error(500, 'Platform not available')
 
 	const { 'registration-id': id } = getCookies(request.headers)

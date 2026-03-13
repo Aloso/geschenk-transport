@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>Admin | Trans* Santa Kassel</title>
+	<title>Admin | Geschenk Trans*port</title>
 </svelte:head>
 
 <h1>Administration</h1>

@@ -57,7 +57,7 @@ export async function POST({ request, platform }): Promise<Response> {
 
 	// Send email
 	await mailer.send({
-		from: { name: 'Trans* Santa', email: 'contact@queereszentrumkassel.de' },
+		from: { name: 'Geschenk Trans*port', email: 'kontakt@geschenk-transport.de' },
 		to: platform.env.ADMIN_RECIPIENTS.split(','),
 		reply: isEmail ? contact : undefined,
 		subject: `Kontaktanfrage: ${subjectContact}`,

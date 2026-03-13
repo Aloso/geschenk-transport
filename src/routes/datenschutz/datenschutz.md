@@ -4,7 +4,7 @@ Wir wissen, dass Datenschutz für Menschen im queeren und aktivistischen Bereich
 
 ## 1. Zusammenfassung
 
-Hier erfährst du, wie auf der Website _trans-santa-kassel.pages.dev_ personenbezogene Daten verarbeitet werden, und wie die Sicherheit deiner Daten gewährleistet wird.
+Hier erfährst du, wie auf der Website _geschenk-transport.de_ personenbezogene Daten verarbeitet werden, und wie die Sicherheit deiner Daten gewährleistet wird.
 
 Eine Nutzung der Seiten ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Wir erfassen nur technisch notwendige Informationen wie deine IP-Adresse. Bei allem, was darüber hinausgeht, ist deine explizite Zustimmung notwendig. Insbesondere verzichten wir auf Tracking und auf Cookies. Plug-ins von sozialen Medien (z.B. Instagram) werden nur geladen, wenn Du sie aktivierst.
 

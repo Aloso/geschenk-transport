@@ -2,7 +2,6 @@
 	import { browser } from '$app/environment'
 	import SubmitButton from '$lib/components/SubmitButton.svelte'
 	import ValidatedInput from '$lib/components/ValidatedInput.svelte'
-	import PresentBox from './PresentBox.svelte'
 
 	let name = $state('')
 	let age = $state<number>()
@@ -34,6 +33,8 @@
 
 				window.turnstile.render('#turnstile-container', {
 					sitekey: import.meta.env.VITE_PUBLIC_TURNSTILE_SITE_KEY,
+					theme: 'light',
+					size: 'flexible',
 					callback: () => {
 						turnstile = 'valid'
 					},

@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { resolve } from '$app/paths'
 	import { page } from '$app/state'
+	import Snowflakes from '$lib/components/Snowflakes.svelte'
 
 	// import favicon from '$lib/assets/favicon.svg';
 	import './global.scss'
@@ -11,17 +13,19 @@
 	<!-- <link rel="icon" href={favicon} /> -->
 </svelte:head>
 
+<Snowflakes />
+
 <main class:admin={page.url.pathname.startsWith('/admin')}>
 	{@render children()}
 </main>
 
 <footer>
-	<span>Trans* Santa Kassel</span>
-	<a href="/">Startseite</a>
-	<a href="/datenschutz">Datenschutz</a>
+	<span>Geschenk Trans*port</span>
+	<a href={resolve('/')}>Startseite</a>
+	<a href={resolve('/datenschutz')}>Datenschutz</a>
 	<span>Impressum</span>
-	<a href="/kontakt">Kontakt</a>
-	<a href="/faq">FAQ</a>
+	<a href={resolve('/kontakt')}>Kontakt</a>
+	<a href={resolve('/faq')}>FAQ</a>
 </footer>
 
 <style lang="scss">

@@ -1,4 +1,8 @@
-<h1>Trans* Santa Kassel</h1>
+<svelte:head>
+	<title>Angemeldet | Geschenk Trans*port</title>
+</svelte:head>
+
+<h1>Geschenk Trans*port</h1>
 
 <p>Du bist jetzt angemeldet 🎉</p>
 <p>Nächste Schritte:</p>
@@ -17,7 +21,3 @@
 <p>
 	Wenn du uns unterstützen willst, freuen wir uns über eine Spende. <a href="/">Hier spenden</a>
 </p>
-
-<svelte:head>
-	<title>Angemeldet | Trans Santa Kassel</title>
-</svelte:head>

@@ -10,6 +10,10 @@
 	let contact = $derived(data.registration?.phone ?? '')
 </script>
 
+<svelte:head>
+	<title>Kontakt | Geschenk Trans*port</title>
+</svelte:head>
+
 <h1>Kontakt</h1>
 
 <p>Hast du ein Anliegen? Dann schreib uns eine Nachricht.</p>
