@@ -1,19 +1,19 @@
 # Datenschutz
 
-Wir wissen, dass Datenschutz für Menschen im queeren und aktivistischen Bereich von besonderer Bedeutung ist. Deswegen gehen wir mit personenbezogenen Daten sehr sorgfältig um.
+Wir wissen, dass Datenschutz für Menschen im queeren Bereich von besonderer Bedeutung ist. Deswegen gehen wir mit personenbezogenen Daten sehr sorgfältig um.
 
 ## 1. Zusammenfassung
 
 Hier erfährst du, wie auf der Website _geschenk-transport.de_ personenbezogene Daten verarbeitet werden, und wie die Sicherheit deiner Daten gewährleistet wird.
 
-Eine Nutzung der Seiten ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Wir erfassen nur technisch notwendige Informationen wie deine IP-Adresse. Bei allem, was darüber hinausgeht, ist deine explizite Zustimmung notwendig. Insbesondere verzichten wir auf Tracking und auf Cookies. Plug-ins von sozialen Medien (z.B. Instagram) werden nur geladen, wenn Du sie aktivierst.
+Eine Nutzung der Seiten ist ohne Angabe personenbezogener Daten möglich. Wir erfassen nur technisch notwendige Informationen wie deine IP-Adresse. Bei allem, was darüber hinausgeht, ist deine explizite Zustimmung notwendig. Insbesondere verzichten wir auf Tracking-Cookies. Plug-ins von sozialen Medien (z.B. Instagram) werden nur geladen, wenn Du sie aktivierst.
 
 ## 2. Verantwortliche\*r
 
 Bei Fragen oder Anliegen, die den Datenschutz betreffen, steht Dir zur Verfügung:
 
 **TODO**  
-E-Mail: TODO  
+E-Mail: <kontakt@geschenk-transport.de>  
 Telefon: TODO
 
 ## 3. Verwendete Dienstleister
@@ -24,11 +24,19 @@ Diese Website verwendet verschiedene Dienstleister, um Dir das bestmögliche Ben
 
 [Cloudflare](https://www.cloudflare.com/) ist unser Hosting- und DNS-Anbieter. Das heißt, jeder Seitenaufruf wird von Cloudflare abgewickelt. Darüber hinaus schützt Cloudflare die Website vor Angriffen und stellt eine hohe Verfügbarkeit der Website sicher.
 
+Wenn du dich für den Geschenk-Transport anmeldest, werden die Anmeldedaten außerdem bei Cloudflare gespeichert. Dafür werden Server innerhalb der EU verwendet, wodurch die Speicherung den strengen EU-Datenschutzgesetzen unterliegt.
+
 Cloudflare erfasst bei Seitenaufrufen die IP-Adresse und weitere technische Informationen zum Seitenaufruf. Dies ist notwendig, um den Betrieb der Seite zu gewährleisten; Cloudflare verwendet diese Informationen außerdem zur Abwehr von Hackerangriffen und anderen Gefahren.
 
 Unter Expert\*innen genießt Cloudflare einen guten Ruf, insbesondere für den starken Fokus auf IT-Sicherheit und Transparenz. Cloudflare hat mehrere Datenschutz-Zertifizierungen, darunter [ISO 27701](https://en.wikipedia.org/wiki/ISO/IEC_27701) und den [Datenschutzrahmen EU-USA](https://ec.europa.eu/commission/presscorner/detail/de/qanda_23_3752). Beachte, dass das Unternehmen in den USA ansässig ist, jedoch werden sämtliche personenbezogenen Daten innerhalb der EU gespeichert. Die Datenschutzerklärung von Cloudflare findest Du [hier](https://www.cloudflare.com/de-de/trust-hub/gdpr/).
 
 Cloudflare ist vertraglich verpflichtet, nur unbedingt benötigte personenbezogene Daten zu sammeln und diese nicht länger als notwendig zu speichern. Diesen Vertrag kannst Du [hier einsehen](https://www.cloudflare.com/cloudflare_customer_DPAv3-German.pdf).
+
+### Purelymail<div class="subtitle">E-Mail Postfächer</div>
+
+Wenn Du uns eine E-Mail sendest oder das Anmeldeformular oder Kontaktformular verwendest, werden die Angaben in einem Postfach von Purelymail gespeichert. Dies gilt für alle E-Mail-Adressen mit der Domain _geschenk-transport.de_, zum Beispiel _kontakt\@geschenk-transport.de_. Purelymail speichert E-Mails unter Verwendung von Amazon Web Services (AWS) und verwendet moderne Sicherheitsstandards.
+
+Die Datenschutzerklärung von Purelymail findest du [hier](https://purelymail.com/privacy).
 
 ## 4. Deine Rechte
 

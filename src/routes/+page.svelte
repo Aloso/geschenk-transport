@@ -48,6 +48,10 @@
 		Lass uns die Feiertage ein bisschen bunter und herzlicher machen. Melde dich jetzt an und lass
 		dich von uns beschenken!
 	</p>
+
+	<p>
+		Noch Fragen? Dann schau auf unsere <a href={resolve('/faq')}>Hilfe-Seite</a>.
+	</p>
 </div>
 
 <PresentBox>

@@ -36,11 +36,11 @@
 </main>
 
 <footer>
-	<span>Geschenk Trans*port</span>
-	<a href={resolve('/datenschutz')}>Datenschutz</a>
-	<span>Impressum</span>
 	<a href={resolve('/kontakt')}>Kontakt</a>
-	<a href={resolve('/faq')}>FAQ</a>
+	<a href={resolve('/faq')}>Hilfe</a>
+	<a href={resolve('/unterstuetzen')}>Spendenaktion</a>
+	<a href={resolve('/datenschutz')}>Datenschutz</a>
+	<a href={resolve('/impressum')}>Impressum</a>
 </footer>
 
 <style lang="scss">
