@@ -2,8 +2,9 @@
 
 Angaben gemäß § 5 TMG:
 
-Kontakt:  
-TODO
+Kontakt: Queeres Zentrum Kassel e.V.  
+Mauerstraße 11  
+34117 Kassel
 
 E-Mail: <kontakt@geschenk-transport.de>
 

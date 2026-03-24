@@ -12,9 +12,8 @@ Eine Nutzung der Seiten ist ohne Angabe personenbezogener Daten möglich. Wir er
 
 Bei Fragen oder Anliegen, die den Datenschutz betreffen, steht Dir zur Verfügung:
 
-**TODO**  
-E-Mail: <kontakt@geschenk-transport.de>  
-Telefon: TODO
+**Pip Tommi Hügle**  
+E-Mail: <kontakt@geschenk-transport.de>
 
 ## 3. Verwendete Dienstleister
 
@@ -34,7 +33,7 @@ Cloudflare ist vertraglich verpflichtet, nur unbedingt benötigte personenbezoge
 
 ### Purelymail<div class="subtitle">E-Mail Postfächer</div>
 
-Wenn Du uns eine E-Mail sendest oder das Anmeldeformular oder Kontaktformular verwendest, werden die Angaben in einem Postfach von Purelymail gespeichert. Dies gilt für alle E-Mail-Adressen mit der Domain _geschenk-transport.de_, zum Beispiel _kontakt\@geschenk-transport.de_. Purelymail speichert E-Mails unter Verwendung von Amazon Web Services (AWS) und verwendet moderne Sicherheitsstandards.
+Wenn Du uns eine E-Mail sendest oder das Anmeldeformular oder Kontaktformular verwendest, werden die Angaben in einem Postfach von Purelymail gespeichert. Dies gilt für alle E-Mail-Adressen mit der Domain _geschenk-transport.de_, zum Beispiel _kontakt\@geschenk-transport.de_. Purelymail speichert E-Mails unter Verwendung von Amazon Web Services (AWS) und verwendet moderne Sicherheitsstandards. Die Daten werden nur für die Bearbeitung des Anliegens beziehungsweise der Anmeldung gespeichert und danach umgehend gelöscht.
 
 Die Datenschutzerklärung von Purelymail findest du [hier](https://purelymail.com/privacy).
 

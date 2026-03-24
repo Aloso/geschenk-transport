@@ -15,13 +15,13 @@
 	<p>Hallo du wunderbarer Mensch! 🏳️‍⚧️</p>
 
 	<p>
-		Die Weihnachtszeit steht vor der Tür – eine Zeit, die manchmal laut und trubelig ist, aber auch
-		die Chance bietet, innezuhalten und einander eine Freude zu machen. Wir finden: Du hast ein
-		Lächeln verdient!
+		Die Weihnachtszeit ist eine Zeit, die manchmal laut und trubelig ist, aber auch die Chance
+		bietet, innezuhalten und einander eine Freude zu machen. Wir finden: Du hast ein Lächeln
+		verdient!
 	</p>
 
 	<p>
-		Deshalb starten wir dieses Jahr unser gemeinsames Wichtel-Projekt exklusiv für Trans* Kinder und
+		Deshalb starten wir dieses Jahr unser gemeinsames Wichtel-Projekt exklusiv für trans* Kinder und
 		Jugendliche. Ganz egal, wo du auf deinem Weg gerade stehst – wir möchten, dass du weißt: Du bist
 		gesehen, du bist wertvoll und du bist Teil einer großartigen Gemeinschaft.
 	</p>
