@@ -41,6 +41,9 @@
 	<a href={resolve('/unterstuetzen')}>Spendenaktion</a>
 	<a href={resolve('/datenschutz')}>Datenschutz</a>
 	<a href={resolve('/impressum')}>Impressum</a>
+	{#if page.url.pathname.startsWith('/admin')}
+		<a href={resolve('/admin/logout')}>Abmelden</a>
+	{/if}
 </footer>
 
 <style lang="scss">

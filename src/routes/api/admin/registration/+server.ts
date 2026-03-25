@@ -1,11 +1,12 @@
-import { error } from '@sveltejs/kit'
-import { tryAuthentication } from '../../../../backend/auth'
+import { error, redirect } from '@sveltejs/kit'
+import { tryAuthentication } from '$backend/auth'
+import { resolve } from '$app/paths'
 
 export async function DELETE({ request, platform }): Promise<Response> {
 	if (!platform) error(500, 'Platform not available')
 
 	if (!tryAuthentication(request, platform.env)) {
-		return Response.redirect(new URL('/admin/loginForm?m=loggedOut', request.url), 303)
+		return redirect(303, resolve('/admin/login?m=loggedOut'))
 	}
 
 	const id = new URL(request.url).searchParams.get('id') ?? error(400, 'Missing id')
@@ -18,7 +19,7 @@ export async function PATCH({ request, platform }): Promise<Response> {
 	if (!platform) error(500, 'Platform not available')
 
 	if (!tryAuthentication(request, platform.env)) {
-		return Response.redirect(new URL('/admin/loginForm?m=loggedOut', request.url), 303)
+		return redirect(303, resolve('/admin/login?m=loggedOut'))
 	}
 
 	const { id, status, notes } = await request.json()

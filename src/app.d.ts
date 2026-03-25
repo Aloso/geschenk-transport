@@ -17,6 +17,7 @@ declare global {
 		type EnvVars = Record<`ADMIN__${string}`, string> & {
 			DB: D1Database
 
+			SUBMISSIONS_LIMIT: string
 			ADMIN_RECIPIENTS: string
 			SMTP_USERNAME: string
 			SMTP_PASSWORD: string

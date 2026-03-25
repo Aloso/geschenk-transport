@@ -3,7 +3,7 @@ export async function GET(): Promise<Response> {
 		status: 303,
 		headers: {
 			Location: '/admin?m=loggedOut',
-			'Set-Cookie': `_santaCred=0; HttpOnly; Secure; SameSite=Strict; Max-Age=0`,
+			'Set-Cookie': `_santaCred=0; HttpOnly; Secure; SameSite=Strict; Max-Age=0; Path=/`,
 		},
 	})
 }

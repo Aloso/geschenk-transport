@@ -1,5 +1,6 @@
-import { error } from '@sveltejs/kit'
-import { verifyCredentials } from '../../../backend/auth'
+import { error, redirect } from '@sveltejs/kit'
+import { verifyCredentials } from '$backend/auth'
+import { resolve } from '$app/paths'
 
 export async function POST({ request, platform }): Promise<Response> {
 	if (!platform) error(500, 'Platform not available')
@@ -11,7 +12,7 @@ export async function POST({ request, platform }): Promise<Response> {
 	}
 
 	if (!credentials.user || !credentials.password || !verifyCredentials(platform.env, credentials)) {
-		return Response.redirect(new URL('/admin/loginForm?m=loginFailed', request.url), 303)
+		return redirect(303, resolve('/admin/login?m=loginFailed'))
 	}
 
 	const cookieString = btoa(`${credentials.user}@${credentials.password}`).replaceAll('=', '')

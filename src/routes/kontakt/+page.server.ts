@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit'
 import type { Registration } from '$lib/data.js'
 import { getCookies } from '$lib/cookie.js'
-import { getRegistration } from '../../backend/registration.js'
+import { getRegistration } from '$backend/registration.js'
 
 export interface PageData {
 	registration?: Registration

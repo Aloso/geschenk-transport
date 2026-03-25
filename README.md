@@ -17,10 +17,3 @@ pnpm run build
 ```
 
 You can preview the production build with `pnpm run preview`.
-
-## TODO
-
-- Limit an Anmeldungen
-- E-Mail
-- Design
-- Impressums-Seite

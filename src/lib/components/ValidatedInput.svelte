@@ -8,12 +8,14 @@
 				? 'number'
 				: never
 		name?: string
+		placeholder?: string
 		value: T
-		required?: string
+		required?: string | (() => string | undefined)
 		error: string | false
 		hasError?: (input: T) => string | false
 		submitClicked?: boolean
 		style?: string
+		smaller?: boolean
 	}
 
 	let {
@@ -21,12 +23,14 @@
 		label2,
 		type,
 		name,
+		placeholder,
 		value = $bindable(),
 		required,
 		error = $bindable(),
 		hasError,
 		submitClicked,
 		style,
+		smaller,
 	}: Props<T> = $props()
 
 	let focused = $state(false)
@@ -36,8 +40,9 @@
 	)
 
 	$effect(() => {
-		if (required && (value === '' || value === undefined)) {
-			error = required
+		const isRequired = typeof required === 'function' ? required() : required
+		if (isRequired && (value === '' || value === undefined)) {
+			error = isRequired
 		} else if (hasError) {
 			error = hasError(value)
 			customError = error
@@ -47,7 +52,7 @@
 	})
 </script>
 
-<label>
+<label class:smaller>
 	<div class="label-text">{label}</div>
 	{#if label2}
 		<div class="label2-text">{label2}</div>
@@ -57,6 +62,7 @@
 		<textarea
 			{name}
 			value={value as string}
+			{placeholder}
 			class="formi"
 			class:invalid={errorVisible}
 			{style}
@@ -69,6 +75,7 @@
 			{type}
 			{name}
 			{value}
+			{placeholder}
 			class="formi"
 			class:invalid={errorVisible}
 			{style}
@@ -81,6 +88,7 @@
 			{type}
 			{name}
 			{value}
+			{placeholder}
 			class="formi"
 			class:invalid={errorVisible}
 			{style}
@@ -104,12 +112,20 @@
 		&:first-child {
 			margin-top: 0;
 		}
+		&.smaller {
+			margin: 0.6rem 0;
+		}
 	}
 	.label-text {
 		display: block;
 		margin: 0 0 0.5rem;
 		font-size: 1.1rem;
 		font-weight: 650;
+
+		.smaller & {
+			font-size: 0.95rem;
+			font-weight: 580;
+		}
 	}
 	.label2-text {
 		display: block;

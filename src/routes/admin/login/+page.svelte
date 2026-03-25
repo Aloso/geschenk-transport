@@ -27,10 +27,15 @@
 
 <svelte:head>
 	<title>Admin Login | Geschenk Trans*port</title>
+	<style>
+		main {
+			max-width: 28rem !important;
+		}
+	</style>
 </svelte:head>
 
 <div class="box">
-	<form onsubmit={submit} method="POST" action={resolve('/admin/login')}>
+	<form onsubmit={submit} method="POST" action={resolve('/api/admin/session')}>
 		<h1>Admin-Login</h1>
 		<label>
 			Name:
@@ -54,7 +59,8 @@
 		</label>
 		<button
 			type="submit"
-			class="formi primary"
+			class="formi primary wide"
+			style="margin-top: 2rem; margin-bottom: 0"
 			disabled={submitted && (username === '' || password === '')}
 		>
 			Anmelden
@@ -69,10 +75,6 @@
 </div>
 
 <style lang="scss">
-	:global(main) {
-		max-width: 450px !important;
-	}
-
 	h1 {
 		text-align: center;
 	}

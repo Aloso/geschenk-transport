@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths'
 	import SubmitButton from '$lib/components/SubmitButton.svelte'
 	import ValidatedInput from '$lib/components/ValidatedInput.svelte'
 	import type { PageData } from './+page.server'
@@ -6,7 +7,7 @@
 	let { data }: { data: PageData } = $props()
 
 	let message = $state('')
-	let contact = $derived(data.registration?.phone ?? '')
+	let contact = $derived(data.registration?.email ?? data.registration?.phone ?? '')
 </script>
 
 <svelte:head>
@@ -25,7 +26,7 @@
 </div>
 
 <div class="box pink">
-	<form method="post" action="/kontakt/submit">
+	<form method="post" action={resolve('/api/message')}>
 		<ValidatedInput
 			type="textarea"
 			name="message"
@@ -47,9 +48,8 @@
 
 		{#if data.registration}
 			<p>
-				Deine {data.registration.status === 'deleted' ? 'gelöschte' : ''} Anmeldung am {new Date(
-					data.registration.created,
-				).toLocaleDateString()} wird an die Nachricht angehängt.
+				Deine {data.registration.status === 'deleted' ? 'gelöschte' : ''} Anmeldung am
+				{new Date(data.registration.created).toLocaleDateString()} wird an die Nachricht angehängt.
 			</p>
 		{/if}
 

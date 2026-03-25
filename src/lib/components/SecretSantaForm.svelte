@@ -1,18 +1,22 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
+	import { resolve } from '$app/paths'
 	import SubmitButton from '$lib/components/SubmitButton.svelte'
 	import ValidatedInput from '$lib/components/ValidatedInput.svelte'
+	import { isValidEmailAddress, isValidPhoneNumber } from '$lib/data'
 
 	let name = $state('')
 	let age = $state<number>()
 	let address = $state('')
 	let phone = $state('')
+	let email = $state('')
 	let moreInfo = $state('')
 
 	let nameError = $state<string | false>(false)
 	let ageError = $state<string | false>(false)
 	let addressError = $state<string | false>(false)
 	let phoneError = $state<string | false>(false)
+	let emailError = $state<string | false>(false)
 	let moreInfoError = $state<string | false>(false)
 	let formError = $derived(nameError || ageError || addressError || phoneError)
 
@@ -49,7 +53,7 @@
 
 <form
 	method="POST"
-	action="/submit"
+	action={resolve('/api/registration')}
 	onsubmit={event => {
 		if (formError) {
 			event.preventDefault()
@@ -94,20 +98,41 @@
 				: 'Gib eine Adresse mit Straße, Hausnummer, Postleitzahl und Ort ein'
 		}}
 		style="--min-height: 100px"
+		placeholder={'Adresszeile 1\nAdresszeile 2'}
 	/>
+	<div class="label-text">Kontakt</div>
+	<div class="label2-text">
+		Vor dem Versand werden wir dir eine Nachricht schicken. Du musst darauf antworten, um den
+		Versand zu bestätigen.
+	</div>
+	<div class="label2-text">
+		Wir brauchen dafür deine Telefonnummer oder E-Mail. Nur eines davon ist verpflichtend.
+	</div>
 	<ValidatedInput
 		type="tel"
-		label="Telefonnummer"
-		label2="Vor dem Versand werden wir dir eine SMS schicken. Du musst auf die SMS antworten, um den Versand zu bestätigen."
+		label="Telefonnummer (Bestätigung per SMS)"
 		name="phone"
 		bind:value={phone}
 		bind:error={phoneError}
-		required="Dieses Feld darf nicht leer sein"
+		required={() =>
+			email ? undefined : 'Telefonnummer oder E-Mail-Adresse dürfen nicht leer sein'}
 		{submitClicked}
 		hasError={phone =>
-			/^(00\d{1,3}|\+\d{1,3}|0)[\d]{7,16}$/.test(phone.replaceAll(/[ .\-()/\\]/g, '').trim())
-				? false
-				: 'Die Telefonnummer ist ungültig'}
+			!phone || isValidPhoneNumber(phone) ? false : 'Die Telefonnummer ist ungültig'}
+		smaller
+	/>
+	<ValidatedInput
+		type="email"
+		label="E-Mail-Adresse"
+		name="email"
+		bind:value={email}
+		bind:error={emailError}
+		required={() =>
+			phone ? undefined : 'Telefonnummer oder E-Mail-Adresse dürfen nicht leer sein'}
+		{submitClicked}
+		hasError={email =>
+			!email || isValidEmailAddress(email) ? false : 'Die E-Mail-Adresse ist ungültig'}
+		smaller
 	/>
 	<ValidatedInput
 		type="textarea"
@@ -126,3 +151,20 @@
 		{turnstile === 'invalid' ? 'Captcha wird noch gelöst...' : 'Anmelden'}
 	</SubmitButton>
 </form>
+
+<style lang="scss">
+	.label-text {
+		display: block;
+		margin: 0 0 0.5rem;
+		font-size: 1.1rem;
+		font-weight: 650;
+	}
+
+	.label2-text {
+		display: block;
+		margin: 0 0 0.5rem;
+		font-size: 0.9rem;
+		opacity: 0.8;
+		line-height: 140%;
+	}
+</style>

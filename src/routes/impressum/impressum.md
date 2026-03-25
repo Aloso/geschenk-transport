@@ -2,7 +2,8 @@
 
 Angaben gemäß § 5 TMG:
 
-Kontakt: Queeres Zentrum Kassel e.V.  
+Kontakt:  
+Queeres Zentrum Kassel e.V.  
 Mauerstraße 11  
 34117 Kassel
 

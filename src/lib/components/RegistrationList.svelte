@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { invalidateAll } from '$app/navigation'
+	import { resolve } from '$app/paths'
 	import type { Registration } from '$lib/data'
 	import { SvelteSet } from 'svelte/reactivity'
 
@@ -10,7 +11,7 @@
 
 	let { registrations = $bindable(), deleted }: Props = $props()
 
-	let dirty = $state(new SvelteSet<string>())
+	let dirty = new SvelteSet<string>()
 
 	const rtf1 = new Intl.RelativeTimeFormat('de', { style: 'short', localeMatcher: 'best fit' })
 	const now = $state(Date.now())
@@ -38,7 +39,10 @@
 	type RegistrationPatch = { id: string } & Partial<Pick<Registration, 'status' | 'notes'>>
 
 	async function patchReg(patch: RegistrationPatch, invalidate = true) {
-		await fetch(`/admin/api/registration`, { method: 'PATCH', body: JSON.stringify(patch) })
+		await fetch(resolve('/api/admin/registration'), {
+			method: 'PATCH',
+			body: JSON.stringify(patch),
+		})
 		if (invalidate) invalidateAll()
 	}
 
@@ -59,9 +63,9 @@
 		await patchReg({ id, status: 'pending' })
 	}
 
-	async function removePermanently(id: string) {
+	async function _removePermanently(id: string) {
 		if (confirm('Registrierung endgültig löschen?')) {
-			await fetch(`/admin/api/registration?id=${id}`, { method: 'DELETE' })
+			await fetch(`/api/admin/registration?id=${id}`, { method: 'DELETE' })
 			invalidateAll()
 		}
 	}
