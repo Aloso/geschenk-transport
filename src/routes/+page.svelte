@@ -9,9 +9,13 @@
 
 <svelte:head>
 	<title>Geschenk Trans*port</title>
+	<meta
+		name="description"
+		content="Ein Wichtel-Projekt für trans Kinder und Jugendliche. Melde dich an und lasse dich beschenken!"
+	/>
 </svelte:head>
 
-<div class="box">
+<div class="box small">
 	<p>Hallo du wunderbarer Mensch! 🏳️‍⚧️</p>
 
 	<p>

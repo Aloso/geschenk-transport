@@ -14,7 +14,7 @@
 	<title>Kontakt | Geschenk Trans*port</title>
 </svelte:head>
 
-<div class="box">
+<div class="box small">
 	<h1>Kontakt</h1>
 
 	<p>Hast du ein Anliegen? Dann schreib uns eine Nachricht im folgenden Formular.</p>
@@ -25,7 +25,7 @@
 	</p>
 </div>
 
-<div class="box pink">
+<div class="box small pink">
 	<form method="post" action={resolve('/api/message')}>
 		<ValidatedInput
 			type="textarea"

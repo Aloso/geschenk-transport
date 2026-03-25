@@ -6,7 +6,7 @@
 	<title>Angemeldet | Geschenk Trans*port</title>
 </svelte:head>
 
-<div class="box">
+<div class="box small">
 	<p>Du bist jetzt angemeldet 🎉</p>
 	<p>Nächste Schritte:</p>
 

@@ -13,7 +13,7 @@
 	<title>Admin | Geschenk Trans*port</title>
 </svelte:head>
 
-<div class="box">
+<div class="box large">
 	<h1>Administration</h1>
 
 	<h2>Registrierungen</h2>

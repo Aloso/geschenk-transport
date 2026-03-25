@@ -17,10 +17,7 @@
 
 <Snowflakes />
 
-<main
-	class:admin={page.url.pathname.startsWith('/admin')}
-	class:small={page.url.pathname === '/' || page.url.pathname.startsWith('/kontakt')}
->
+<main>
 	<nav>
 		<a class:active={page.url.pathname === '/'} href={resolve('/')}>Mitmachen</a>
 		<a
@@ -68,17 +65,7 @@
 	}
 
 	main {
-		max-width: 45rem;
-		margin: 0 auto;
 		padding: 2rem 2rem 0 2rem;
-
-		&.admin {
-			max-width: 70rem;
-		}
-
-		&.small {
-			max-width: 35rem;
-		}
 	}
 
 	nav {

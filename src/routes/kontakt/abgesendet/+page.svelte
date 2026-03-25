@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths'
 </script>
 
-<div class="box">
+<div class="box small">
 	<h1>Nachricht abgesendet</h1>
 
 	<p>Wir haben deine Nachricht erhalten und werden uns umgehend um dein Anliegen kümmern.</p>

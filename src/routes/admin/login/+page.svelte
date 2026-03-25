@@ -27,14 +27,9 @@
 
 <svelte:head>
 	<title>Admin Login | Geschenk Trans*port</title>
-	<style>
-		main {
-			max-width: 28rem !important;
-		}
-	</style>
 </svelte:head>
 
-<div class="box">
+<div class="box small">
 	<form onsubmit={submit} method="POST" action={resolve('/api/admin/session')}>
 		<h1>Admin-Login</h1>
 		<label>
@@ -75,6 +70,10 @@
 </div>
 
 <style lang="scss">
+	.box.small {
+		max-width: 27rem;
+	}
+
 	h1 {
 		text-align: center;
 	}
