@@ -77,11 +77,10 @@
 	<table class="reg-table">
 		<thead>
 			<tr>
-				<th>Telefon</th>
+				<th>Kontakt</th>
 				<th>Anmeldung</th>
-				<th>Name</th>
+				<th>Name, Alter</th>
 				<th>Adresse</th>
-				<th>Alter</th>
 				<th>Infos</th>
 				<th>Verifiz.</th>
 				<th>Notizen</th>
@@ -92,17 +91,27 @@
 		<tbody>
 			{#each registrations as reg (reg.id)}
 				<tr>
-					<td>{reg.phone}</td>
+					<td>
+						{#if reg.phone}
+							{reg.phone}<br />
+						{/if}
+						{#if reg.email}
+							{reg.email}
+						{/if}
+					</td>
 					<td title={new Date(reg.created).toLocaleString()}>{formatCreated(reg.created)}</td>
-					<td>{reg.name}</td>
+					<td>
+						<strong>{reg.name}</strong><br />
+						{reg.age}
+					</td>
 					<td class="multiline">{reg.address}</td>
-					<td>{reg.age}</td>
 					<td>{reg.moreInfo}</td>
 					<td>
 						<input
 							type="checkbox"
 							checked={reg.status === 'verified'}
 							oninput={e => setVerified(reg.id, e.currentTarget.checked)}
+							disabled={reg.status === 'deleted'}
 						/>
 					</td>
 					<td>

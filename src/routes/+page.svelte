@@ -60,7 +60,9 @@
 		{#if data.registration.status === 'deleted'}
 			<p>Deine Anmeldung wurde vom Support gelöscht.</p>
 			<p>Wenn du glaubst, dass das ein Fehler ist, nimm bitte mit uns Kontakt auf:</p>
-			<a class="formi button primary wide" href={resolve('/kontakt')}>Kontaktformular</a>
+			<a class="formi button primary wide" href={resolve('/kontakt')} style="margin-bottom: 0">
+				Kontaktformular
+			</a>
 		{:else}
 			<p>Du wurdest für den Geschenk-Trans*port angemeldet.</p>
 			<p>Folgende Daten wurden gespeichert:</p>
@@ -87,13 +89,15 @@
 			</ul>
 			{#if data.registration.status === 'verified'}
 				<p>
-					Deine Angaben wurden von uns geprüft. Du kannst dich jetzt zurücklehnen und auf dein
-					Geschenk warten 🎉
+					Deine Angaben wurden von uns bereits geprüft. Du kannst dich jetzt zurücklehnen und auf
+					dein Geschenk warten 🎉
 				</p>
 			{/if}
 
 			<p>Stimmt etwas nicht? Dann nimm bitte mit uns Kontakt auf:</p>
-			<a class="formi button primary wide" href={resolve('/kontakt')}>Kontaktformular</a>
+			<a class="formi button primary wide" href={resolve('/kontakt')} style="margin-bottom: 0">
+				Kontaktformular
+			</a>
 		{/if}
 	{:else if data.error}
 		{#if data.error === 'not-found'}
