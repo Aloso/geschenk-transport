@@ -91,6 +91,7 @@ async function verifyCaptcha(token: string, ip: string, platform: App.Platform) 
 	const outcome = await result.json()
 
 	if (!outcome.success) {
+		console.log(outcome)
 		error(403, 'Turnstile captcha verification failed')
 	}
 }
