@@ -19,7 +19,7 @@
 
 <main
 	class:admin={page.url.pathname.startsWith('/admin')}
-	class:small={page.url.pathname === '/' || page.url.pathname === '/kontakt'}
+	class:small={page.url.pathname === '/' || page.url.pathname.startsWith('/kontakt')}
 >
 	<nav>
 		<a class:active={page.url.pathname === '/'} href={resolve('/')}>Mitmachen</a>

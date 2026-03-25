@@ -2,10 +2,15 @@
 	import { resolve } from '$app/paths'
 </script>
 
-<h1>Geschenk Trans*port</h1>
+<div class="box">
+	<h1>Nachricht abgesendet</h1>
 
-<p>Wir haben deine Nachricht erhalten.</p>
-<p><a href={resolve('/')}>Zur Startseite</a></p>
+	<p>Wir haben deine Nachricht erhalten und werden uns umgehend um dein Anliegen kümmern.</p>
+
+	<a class="button formi primary wide" href={resolve('/')} style="margin-bottom: 0">
+		Zur Startseite
+	</a>
+</div>
 
 <svelte:head>
 	<title>Nachricht übermittelt | Geschenk Trans*port</title>

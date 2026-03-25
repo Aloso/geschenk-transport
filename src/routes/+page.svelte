@@ -65,10 +65,18 @@
 			<p>Du wurdest für den Geschenk-Trans*port angemeldet.</p>
 			<p>Folgende Daten wurden gespeichert:</p>
 			<ul>
-				<li>
-					<strong>Telefonnummer:</strong>
-					{data.registration.phone}
-				</li>
+				{#if data.registration.email}
+					<li>
+						<strong>E-Mail-Adresse:</strong>
+						{data.registration.email}
+					</li>
+				{/if}
+				{#if data.registration.phone}
+					<li>
+						<strong>Telefonnummer:</strong>
+						{data.registration.phone}
+					</li>
+				{/if}
 				<li style="white-space: pre-wrap;">
 					<strong>Liefer-Adresse:</strong>{'\n'}{data.registration.address}
 				</li>

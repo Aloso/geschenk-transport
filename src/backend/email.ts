@@ -69,12 +69,12 @@ export function registrationDataAsHtml(registration: Registration) {
 
 	return `<p>Anmeldedaten:</p>
   <ul>
-    <li><b>Datum der Anmeldung</b>: ${new Date(created).toLocaleString()}</li>
+    <li><b>Datum der Anmeldung</b>: ${new Date(created).toLocaleString('de-DE')}</li>
     <li><b>Name</b>: ${escapeHtml(name)}</li>
     <li><b>Alter</b>: ${age} Jahre</li>
     <li style="white-space: pre-wrap"><b>Anschrift</b>: ${escapeHtml(address)}</li>
-    ${phone && `<li><b>Telefon</b>: ${escapeHtml(phone)}</li>`}
-    ${email && `<li><b>E-Mail</b>: ${escapeHtml(email)}</li>`}
+    ${phone ? `<li><b>Telefon</b>: ${escapeHtml(phone)}</li>` : ''}
+    ${email ? `<li><b>E-Mail</b>: ${escapeHtml(email)}</li>` : ''}
     <li><b>Weitere Informationen</b>: ${escapeHtml(moreInfo ?? '')}</li>
     <li><b>Status</b>: ${status === 'deleted' ? 'Gelöscht' : registration.status === 'verified' ? 'Verifiziert' : 'Eingereicht'}</li>
   </ul>`
